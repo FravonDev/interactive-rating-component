@@ -8,34 +8,50 @@
   
   <title>Frontend Mentor | Interactive rating component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Rating state start -->
-<div class="main-card"></div>
-
-  <!-- Rating state end -->
-
-  <!-- Thank you state start -->
-
-  You selected <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
+<div class="container">  <!-- Rating state start -->
+  <div class="main-card">
+    <div class="main-star">
+      <img src="images/icon-star.svg" alt="star">
+    </div>
+    <div class="main-text">
+      <h2 id="main-title">How did we do?</h2>
+      <p id="main-paragraph">lease let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+    </div>
+      <div id="main-ratting">
+        <button class="btn-ratting">1</button>
+        <button class="btn-ratting">2</button>
+        <button class="btn-ratting">3</button>
+        <button class="btn-ratting">4</button>
+        <button class="btn-ratting">5</button>
+      </div>
+      <button type="submit">Submit</button>
 
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Flavio adriano</a>.
+        
   </div>
+  
+  <div class="thanks-card" style="visibility:hidden;">
+    
+    <!-- Thank you state start -->
+  
+    You selected <!-- Add rating here --> out of 5
+  
+    Thank you!
+  
+    We appreciate you taking the time to give a rating. If you ever need more support, 
+    don’t hesitate to get in touch!
+  
+    <!-- Thank you state end -->
+  
+  </div>
+  <!--   
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Flavio adriano</a>.
+    </div> --></div>
 </body>
 </html>
