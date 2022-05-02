@@ -9,6 +9,7 @@
   <title>Frontend Mentor | Interactive rating component</title>
 
   <link rel="stylesheet" href="style.css">
+  <script defer src="scritp.js"></script>
 </head>
 <body>
 
@@ -22,13 +23,13 @@
       <p id="main-paragraph">lease let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
     </div>
       <div id="main-ratting">
-        <button class="btn-ratting">1</button>
-        <button class="btn-ratting">2</button>
-        <button class="btn-ratting">3</button>
-        <button class="btn-ratting">4</button>
-        <button class="btn-ratting">5</button>
+        <button value="1" onclick="getButtonValue(this.value)" class="btn-ratting">1</button>
+        <button value="2" onclick="getButtonValue(this.value)" class="btn-ratting">2</button>
+        <button value="3" onclick="getButtonValue(this.value)" class="btn-ratting">3</button>
+        <button value="4" onclick="getButtonValue(this.value)" class="btn-ratting">4</button>
+        <button value="5" onclick="getButtonValue(this.value)" class="btn-ratting">5</button>
       </div>
-      <button type="submit">Submit</button>
+      <button id="btn-submit" onclick="showSelection(currentSelected)" type="button">SUBMIT</button>
 
   
         
@@ -37,18 +38,21 @@
   <div class="thanks-card" style="visibility:hidden;">
     
     <!-- Thank you state start -->
+    <img src="/interactive-rating-component-main/images/illustration-thank-you.svg" alt="">
+      
+    <div class="selected-box">
+      <p id="selectedValue"> You selected <!-- Add rating here --> out of 5</p>
+    </div>
+
+    <h2 id="thank">Thank you!</h3>
   
-    You selected <!-- Add rating here --> out of 5
-  
-    Thank you!
-  
-    We appreciate you taking the time to give a rating. If you ever need more support, 
-    don’t hesitate to get in touch!
+    <p id="selectedParagraph"> We appreciate you taking the time to give a rating. If you ever need more support, 
+    don’t hesitate to get in touch!</p>
   
     <!-- Thank you state end -->
   
   </div>
-  <!--   
+  <!--
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="#">Flavio adriano</a>.
